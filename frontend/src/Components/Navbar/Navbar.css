@@ -1,0 +1,150 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+/* Desktop Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.nav-links li a:hover {
+  color: #0d47a1;
+}
+
+/* Active Link */
+.nav-links li a.active {
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+/* Desktop Button */
+.nav-btn {
+  padding: 10px 20px;
+  background: #0d47a1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #08306b;
+}
+
+/* MOBILE */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #0d47a1;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background: #fff;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.mobile-menu a.active {
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.mobile-btn {
+  padding: 12px 20px;
+  background: #0d47a1;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.mobile-btn:hover {
+  background: #08306b;
+}
+
+/* Hamburger Animation */
+.change.bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change.bar2 {
+  opacity: 0;
+}
+
+.change.bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,131 @@
+.footer {
+  background: #0d47a1;
+  color: white;
+  padding: 60px 0 30px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 40px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-section p {
+  margin-top: 10px;
+  color: #e6e6e6;
+  line-height: 1.5;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icon.whatsapp {
+  color: #25d366;
+}
+
+.social-icon.instagram {
+  color: #e1306c;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Quick Links */
+.footer-section.links ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer-section.links ul li {
+  margin: 6px 0;
+}
+
+.footer-section.links ul li a {
+  color: #e6e6e6;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-section.links ul li a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+/* Contact Button */
+.footer-whatsapp {
+  display: inline-block;
+  margin-top: 12px;
+  background: #25d366;
+  padding: 10px 18px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-whatsapp:hover {
+  background: #1da851;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  color: #e6e6e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

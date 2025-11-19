@@ -1,0 +1,18 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* Global Page Padding */
+section {
+  padding: 60px 0;
+}
