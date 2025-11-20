@@ -1,8 +1,17 @@
+/* ===========================
+   FIXED FOOTER DESIGN
+=========================== */
+
 .footer {
-  background: #0d47a1;
+  width: 100%;
+  background: #083a96; /* darker blue for separation */
   color: white;
   padding: 60px 0 30px;
-  margin-top: 40px;
+  margin: 0 !important;
+
+  /* Prevent rounded shapes */
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .footer-container {
@@ -15,13 +24,13 @@
   gap: 40px;
 }
 
-/* Footer Sections */
+/* Footer Section */
 .footer-section {
   flex: 1;
   min-width: 260px;
 }
 
-/* Logo */
+/* LOGO */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -37,13 +46,14 @@
   color: #fff;
 }
 
+/* TEXT */
 .footer-section p {
   margin-top: 10px;
   color: #e6e6e6;
   line-height: 1.5;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .social-icons {
   margin-top: 15px;
   display: flex;
@@ -56,19 +66,14 @@
   transition: 0.3s;
 }
 
-.social-icon.whatsapp {
-  color: #25d366;
-}
-
-.social-icon.instagram {
-  color: #e1306c;
-}
+.social-icon.whatsapp { color: #25d366; }
+.social-icon.instagram { color: #e1306c; }
 
 .social-icon:hover {
   transform: scale(1.15);
 }
 
-/* Quick Links */
+/* QUICK LINKS */
 .footer-section.links ul {
   list-style: none;
   margin-top: 10px;
@@ -89,7 +94,7 @@
   padding-left: 5px;
 }
 
-/* Contact Button */
+/* CONTACT BTN */
 .footer-whatsapp {
   display: inline-block;
   margin-top: 12px;
@@ -105,7 +110,7 @@
   background: #1da851;
 }
 
-/* Bottom Bar */
+/* BOTTOM TEXT */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -115,8 +120,12 @@
   color: #e6e6e6;
 }
 
-/* Responsive */
+/* MOBILE FIXES */
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 50px;
+  }
+
   .footer-container {
     text-align: center;
   }

@@ -4,8 +4,6 @@ import work3 from "../assets/portfolio/work3.webp";
 import work4 from "../assets/portfolio/work4.webp";
 import work5 from "../assets/portfolio/work5.webp";
 import work6 from "../assets/portfolio/work6.webp";
-import work7 from "../assets/portfolio/work7.webp";
-import work8 from "../assets/portfolio/work8.webp";
 
 export const portfolioData = [
   {
@@ -29,23 +27,13 @@ export const portfolioData = [
     link: "https://maurya-civilconstructions.netlify.app/",
   },
   {
-    title: "ID Provider",
-    image: work5,
-    link: "https://mahashivonlinebook.com/",
-  },
-  {
-    title: "Jalwa Games",
-    image: work6,
-    link: "https://jalwagames.agency/",
-  },
-  {
     title: "HSRP Booking",
-    image: work7,
+    image: work5,
     link: "https://boookhsrplatesnow.shop/",
   },
   {
     title: "Landing Page",
-    image: work8,
+    image: work6,
     link: "https://candidgraphic1.netlify.app/",
   },
 ];

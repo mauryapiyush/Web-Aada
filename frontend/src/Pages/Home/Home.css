@@ -1,5 +1,5 @@
 /* ====================
-   NEW MODERN HERO
+   HERO SECTION
 =====================*/
 
 .new-hero {
@@ -7,10 +7,13 @@
   height: 90vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-overlay {
@@ -27,19 +30,24 @@
   color: white;
   max-width: 850px;
   padding: 20px;
-  animation: fadeUp 1s ease forwards;
   opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-title {
   font-size: 52px;
   font-weight: 800;
-  line-height: 1.2;
+  animation: fadeText 1.5s ease forwards;
+}
+
+@keyframes fadeText {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .hero-title span {
@@ -50,79 +58,63 @@
   margin-top: 12px;
   font-size: 20px;
   opacity: 0.9;
+  animation: fadeUp 1.8s ease forwards;
 }
 
+/* HERO BUTTONS */
 .hero-buttons {
   margin-top: 30px;
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
-.btn-hero-primary {
+.btn-hero-primary,
+.btn-hero-secondary {
+  width: 90%;
+  max-width: 320px;
   padding: 14px 30px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Primary */
+.btn-hero-primary {
   background: #0d47a1;
   color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
 }
-
 .btn-hero-primary:hover {
   background: #08306b;
+  transform: scale(1.05);
 }
 
+/* Secondary */
 .btn-hero-secondary {
-  padding: 14px 30px;
   background: white;
-  border: 2px solid #0d47a1;
   color: #0d47a1;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
+  border: 2px solid #0d47a1;
 }
-
 .btn-hero-secondary:hover {
   background: #0d47a1;
   color: white;
-}
-
-/* Mobile Hero */
-@media (max-width: 768px) {
-  .new-hero {
-    height: 75vh;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .btn-hero-primary, 
-  .btn-hero-secondary {
-    width: 90%;
-  }
+  transform: scale(1.05);
 }
 
 
 /* ====================
-   OTHER SECTIONS (your previous CSS)
+   GENERAL HOME SECTIONS
 =====================*/
 
 .home-section {
   padding: 70px 0;
   text-align: center;
   background: #f5f8ff;
-  margin-bottom: 40px;
+  margin: 0;
+  border-bottom: 1px solid #dce5ff;
 }
 
 .section-title {
@@ -132,36 +124,63 @@
   color: #0d47a1;
 }
 
-.preview-container {
+
+/* ==============================
+   UNIFIED CARD DESIGN (Services + Reviews)
+==============================*/
+
+.card-wrapper {
   width: 90%;
   max-width: 1100px;
   margin: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
-.preview-card {
+.card-box {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 280px;
+  padding: 22px 25px;
+  border-radius: 14px;
+  width: 300px;
   border: 1px solid #e3e9ff;
   box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
   transition: 0.3s;
+  text-align: center;
 }
 
-.preview-card:hover {
-  transform: translateY(-5px);
+.card-box:hover {
+  transform: translateY(-6px);
 }
 
-.preview-card img {
+.card-box h3,
+.card-box h4 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.card-box p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.45;
+  margin-top: 6px;
+}
+
+/* Image only for portfolio cards */
+.card-box img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 14px 14px 0 0;
 }
+
+
+/* ====================
+   WHY CHOOSE US
+=====================*/
 
 .why-list {
   list-style: none;
@@ -174,37 +193,52 @@
   margin: 10px 0;
 }
 
+
+/* ====================
+   VIEW MORE BUTTON
+=====================*/
+
 .view-more-btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 12px 22px;
   background: #0d47a1;
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .view-more-btn:hover {
   background: #08306b;
+  transform: scale(1.05);
 }
+
+
+/* ====================
+   CONTACT CTA (UPDATED)
+=====================*/
 
 .contact-cta {
   width: 100%;
-  background: linear-gradient(135deg, #0d47a1, #08306b);
-  padding: 70px 20px;
+  padding: 80px 20px;
   text-align: center;
   color: white;
+  background: linear-gradient(135deg, #004aad, #0076d6);
+  box-shadow: 0px -4px 18px rgba(0, 0, 0, 0.18);
+  margin: 0 !important;
 }
 
 .contact-cta h2 {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .contact-cta p {
   font-size: 18px;
   opacity: 0.95;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .cta-buttons {
@@ -214,22 +248,46 @@
   flex-wrap: wrap;
 }
 
-.cta-primary {
-  background: #ffffff;
-  color: #0d47a1;
-  padding: 14px 28px;
+.cta-primary,
+.cta-whatsapp {
+  padding: 14px 30px;
+  font-size: 18px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 18px;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-primary {
+  background: #ffffff;
+  color: #004aad;
+}
+.cta-primary:hover {
+  background: #e9f2ff;
+  transform: scale(1.05);
 }
 
 .cta-whatsapp {
   background: #25d366;
   color: white;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+}
+.cta-whatsapp:hover {
+  background: #1da851;
+  transform: scale(1.05);
+}
+
+
+/* ====================
+   MOBILE FIXES
+=====================*/
+@media (max-width: 768px) {
+  .new-hero {
+    height: 85vh;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
 }

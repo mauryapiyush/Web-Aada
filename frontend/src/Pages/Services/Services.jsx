@@ -5,19 +5,54 @@ import { servicesData } from "../../Data/Services";
 const Services = () => {
   return (
     <section className="services-section">
-      <h2 className="services-title">Our Services</h2>
+
+      {/* MAIN PAGE TITLE */}
+      <h2 className="services-main-title">Our Services</h2>
+
       <p className="services-subtitle">
-        Affordable and high-quality web development solutions for small businesses.
+        Affordable and high-quality web development & digital marketing services.
+      </p>
+
+      {/* ============================
+          WEBSITE DEVELOPMENT SERVICES
+      ============================ */}
+      <h3 className="category-title">Website Development Services</h3>
+      <p className="category-subtitle">
+        High-quality, fast and modern website solutions for businesses.
       </p>
 
       <div className="services-container">
-        {servicesData.map((service, index) => (
-          <div className="service-card" key={index}>
-            <h3>{service.title}</h3>
-            <p>{service.fullDesc}</p>
-            <span className="price">{service.price}</span>
-          </div>
-        ))}
+        {servicesData
+          .filter((item) => item.category === "website")
+          .map((service, index) => (
+            <div className="service-card" key={index}>
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.shortDesc}</p>
+              <span className="price">{service.price}</span>
+            </div>
+          ))}
+      </div>
+
+      {/* ============================
+          DIGITAL MARKETING SERVICES
+      ============================ */}
+      <h3 className="category-title">Digital Marketing Services</h3>
+      <p className="category-subtitle">
+        Get more leads and customers with powerful ad campaigns.
+      </p>
+
+      <div className="services-container">
+        {servicesData
+          .filter((item) => item.category === "marketing")
+          .map((service, index) => (
+            <div className="service-card" key={index}>
+              <div className="service-icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.shortDesc}</p>
+              <span className="price">{service.price}</span>
+            </div>
+          ))}
       </div>
     </section>
   );

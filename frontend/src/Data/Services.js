@@ -1,30 +1,65 @@
 export const servicesData = [
   {
     title: "Basic Website",
-    shortDesc: "Perfect for small businesses — fast delivery & clean design.",
-    fullDesc:
-      "A clean and fast-loading website ideal for small businesses and startups.",
-    price: "₹1499",
+    shortDesc: "A clean and fast-loading website ideal for small businesses.",
+    price: "₹1999",
+    category: "website",
+    icon: "🌐",
   },
   {
     title: "Business Website",
-    shortDesc: "Professional multi-page website with responsive design.",
-    fullDesc:
-      "A professional multi-page website with modern design and responsive UI.",
+    shortDesc: "A professional multi-page website with modern UI and responsive design.",
     price: "₹2999",
+    category: "website",
+    icon: "💼",
   },
   {
     title: "E-Commerce Website",
-    shortDesc: "Online store with cart, checkout & product management.",
-    fullDesc:
-      "A complete e-commerce website with product management, cart, and checkout.",
+    shortDesc: "Online store with cart, checkout and product management.",
     price: "₹4999",
+    category: "website",
+    icon: "🛒",
   },
   {
     title: "Custom Website",
-    shortDesc: "Fully customized website based on your requirements.",
-    fullDesc:
-      "A fully custom-made website tailored to your business needs.",
+    shortDesc: "A fully custom-made website tailored to your business needs.",
     price: "₹9999+",
+    category: "website",
+    icon: "⚙️",
+  },
+  {
+    title: "Domain Buying & Setup",
+    shortDesc: "We help you buy the best domain and set up DNS, SSL and configuration.",
+    price: "₹499",
+    category: "website",
+    icon: "🌍",
+  },
+  {
+    title: "Website Hosting & Deployment",
+    shortDesc: "Hosted on Netlify/GitHub/Vercel with free SSL & speed optimization.",
+    price: "₹799",
+    category: "website",
+    icon: "🚀",
+  },
+  {
+    title: "Google Ads Management",
+    shortDesc: "Full Google Ads setup, optimization and daily monitoring.",
+    price: "₹1999 / month",
+    category: "marketing",
+    icon: "📈",
+  },
+  {
+    title: "Meta Ads (Facebook & Instagram)",
+    shortDesc: "High-converting ads to grow your business reach.",
+    price: "₹1499 / month",
+    category: "marketing",
+    icon: "📣",
+  },
+  {
+    title: "Website Maintenance",
+    shortDesc: "Monthly updates, fixes, content changes & performance optimization.",
+    price: "₹999 / month",
+    category: "marketing",
+    icon: "🔧",
   },
 ];
