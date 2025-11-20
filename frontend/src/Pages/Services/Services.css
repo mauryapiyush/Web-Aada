@@ -1,43 +1,48 @@
-/* ====================
-   SERVICES MAIN SECTION
-==================== */
+/* ============================
+   MAIN SERVICES SECTION
+============================ */
 
 .services-section {
   width: 100%;
-  padding: 80px 0 60px;
+  padding: 70px 0 60px;
   background: #ffffff;
   text-align: center;
 }
 
-/* MAIN PAGE TITLE */
+/* Main Title */
 .services-main-title {
   font-size: 38px;
   font-weight: 800;
   color: #0d47a1;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .services-subtitle {
   font-size: 17px;
   color: #666;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
-/* CATEGORY TITLES */
+/* Category Title & Divider */
+.category-block {
+  margin-top: 40px;
+}
+
 .category-title {
   font-size: 26px;
   font-weight: 700;
   color: #0d47a1;
-  margin-top: 40px;
 }
 
-.category-subtitle {
-  font-size: 15px;
-  color: #777;
-  margin-bottom: 30px;
+.category-divider {
+  width: 80px;
+  height: 4px;
+  background: #0d47a1;
+  border-radius: 10px;
+  margin: 10px auto 30px;
 }
 
-/* GRID */
+/* Grid Layout */
 .services-container {
   width: 90%;
   max-width: 1200px;
@@ -48,33 +53,34 @@
   gap: 28px;
 }
 
-/* SERVICE CARD */
+/* Service Card */
 .service-card {
   padding: 32px 22px;
   border-radius: 14px;
   background: #f8faff;
   border: 1px solid #dce6ff;
-
-  transition: 0.35s ease;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
-
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
   transform: translateY(0);
 }
 
-/* Hover animation */
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* ICON */
+/* Icon Animation */
 .service-icon {
-  font-size: 42px;
+  font-size: 44px;
   margin-bottom: 12px;
-  color: #0d47a1;
+  transition: 0.3s ease;
 }
 
-/* TITLE */
+.service-card:hover .service-icon {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Title */
 .service-card h3 {
   font-size: 20px;
   font-weight: 700;
@@ -82,26 +88,14 @@
   margin-bottom: 10px;
 }
 
-/* DESCRIPTION */
+/* Description */
 .service-card p {
   color: #555;
   font-size: 15px;
   line-height: 1.45;
-  margin-bottom: 15px;
 }
 
-/* PRICE */
-.price {
-  display: inline-block;
-  background: #e9f1ff;
-  color: #0d47a1;
-  padding: 6px 14px;
-  font-size: 18px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* MOBILE RESPONSIVE */
+/* Mobile Fixes */
 @media (max-width: 768px) {
   .services-main-title {
     font-size: 30px;
@@ -112,6 +106,6 @@
   }
 
   .service-card {
-    padding: 24px 16px;
+    padding: 26px 18px;
   }
 }

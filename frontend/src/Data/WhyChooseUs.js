@@ -1,7 +1,7 @@
 export const whyChooseUsData = [
   {
     title: "💰 Affordable Pricing",
-    desc: "Starting from just ₹1499, perfect for small businesses."
+    desc: "Starting from just ₹1999, perfect for small businesses."
   },
   {
     title: "⚡ Fast Delivery",

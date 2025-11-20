@@ -1,5 +1,5 @@
 // src/App.js
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
@@ -16,10 +16,26 @@ import Contact from "./Pages/Contact/Contact";
 
 import "./App.css";
 
+// ⭐ AOS Animation Imports
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+
+  // ⭐ Initialize AOS Animations
+  useEffect(() => {
+    AOS.init({
+      duration: 800,   // controls speed of animation
+      easing: "ease-in-out",
+      once: true,      // animation happens only once
+      offset: 50,      // delay before animation triggers
+    });
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -28,6 +44,7 @@ function App() {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
