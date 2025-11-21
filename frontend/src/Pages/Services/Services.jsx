@@ -8,14 +8,16 @@ import "aos/dist/aos.css";
 
 const Services = () => {
 
-  // ⭐ Initialize AOS on mount
   useEffect(() => {
     AOS.init({
       duration: 800,
       easing: "ease-in-out",
-      once: true,
+      once: false,      // 🔥 AOS will animate every time
+      mirror: true,     // 🔥 Animate when scrolling up
       offset: 50,
     });
+
+    AOS.refresh();       // 🔥 Forces animations to re-calc
   }, []);
 
   return (
@@ -30,9 +32,7 @@ const Services = () => {
         Affordable and high-quality web development & digital marketing services.
       </p>
 
-      {/* =============================
-          WEBSITE DEVELOPMENT SERVICES
-      ============================== */}
+      {/* WEBSITE DEVELOPMENT */}
       <div className="category-block" data-aos="fade-up">
         <h3 className="category-title">Website Development Services</h3>
         <div className="category-divider"></div>
@@ -55,9 +55,7 @@ const Services = () => {
           ))}
       </div>
 
-      {/* =============================
-          DIGITAL MARKETING SERVICES
-      ============================== */}
+      {/* MARKETING */}
       <div className="category-block" data-aos="fade-up">
         <h3 className="category-title">Digital Marketing Services</h3>
         <div className="category-divider"></div>

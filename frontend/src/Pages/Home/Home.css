@@ -30,24 +30,11 @@
   color: white;
   max-width: 850px;
   padding: 20px;
-  opacity: 0;
-  animation: fadeUp 1.2s ease forwards;
-}
-
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-title {
   font-size: 52px;
   font-weight: 800;
-  animation: fadeText 1.5s ease forwards;
-}
-
-@keyframes fadeText {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
 }
 
 .hero-title span {
@@ -58,7 +45,6 @@
   margin-top: 12px;
   font-size: 20px;
   opacity: 0.9;
-  animation: fadeUp 1.8s ease forwards;
 }
 
 /* HERO BUTTONS */
@@ -106,7 +92,7 @@
 
 
 /* ====================
-   GENERAL HOME SECTIONS
+   HOME SECTIONS
 =====================*/
 
 .home-section {
@@ -126,7 +112,7 @@
 
 
 /* ==============================
-   UNIFIED CARD DESIGN (Services + Reviews)
+   CARD DESIGN
 ==============================*/
 
 .card-wrapper {
@@ -151,7 +137,7 @@
 }
 
 .card-box:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.03);
 }
 
 .card-box h3,
@@ -169,7 +155,7 @@
   margin-top: 6px;
 }
 
-/* Image only for portfolio cards */
+/* Portfolio images */
 .card-box img {
   width: 100%;
   height: 190px;
@@ -216,7 +202,7 @@
 
 
 /* ====================
-   CONTACT CTA (UPDATED)
+   CONTACT CTA
 =====================*/
 
 .contact-cta {

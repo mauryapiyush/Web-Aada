@@ -1,19 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
 
   const closeMenu = () => setIsOpen(false);
 
+  // 🔥 Hide navbar on scroll down → Show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
+
+      if (current > lastScroll && current > 80) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+
+      setLastScroll(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${showNavbar ? "nav-show" : "nav-hide"}`}>
       <div className="nav-container">
 
         {/* Logo */}
-        <NavLink to="/" className="logo">
+        <NavLink to="/" className="logo" onClick={closeMenu}>
           <img src={logo} alt="WebAada Logo" />
           <h2>WebAada</h2>
         </NavLink>
@@ -40,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="mobile-menu">
+        <div className="mobile-menu slide-down">
           <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
           <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
           <NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink>

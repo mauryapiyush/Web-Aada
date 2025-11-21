@@ -1,4 +1,7 @@
-/* Navbar */
+/* =========================
+      NAVBAR BASE DESIGN
+========================= */
+
 .navbar {
   width: 100%;
   background: #ffffff;
@@ -6,8 +9,28 @@
   position: sticky;
   top: 0;
   z-index: 999;
+
+  transition: 0.35s ease-in-out;
+  opacity: 0;
+  animation: fadeNavbar 0.8s ease forwards;
 }
 
+@keyframes fadeNavbar {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Hide on scroll down, show on scroll up */
+.nav-hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.nav-show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Container */
 .nav-container {
   width: 90%;
   max-width: 1200px;
@@ -18,7 +41,9 @@
   justify-content: space-between;
 }
 
-/* Logo */
+/* =========================
+        LOGO
+========================= */
 .logo {
   display: flex;
   align-items: center;
@@ -28,6 +53,11 @@
 
 .logo img {
   width: 40px;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1) rotate(4deg);
 }
 
 .logo h2 {
@@ -36,7 +66,9 @@
   color: #0d47a1;
 }
 
-/* Desktop Menu */
+/* =========================
+      DESKTOP LINKS
+========================= */
 .nav-links {
   list-style: none;
   display: flex;
@@ -47,35 +79,56 @@
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  transition: 0.2s ease;
+  position: relative;
+  transition: 0.25s;
 }
 
-/* Hover */
+/* Hover underline animation */
+.nav-links li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0d47a1;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
 .nav-links li a:hover {
   color: #0d47a1;
 }
 
-/* Active Link */
 .nav-links li a.active {
   color: #0d47a1;
   font-weight: 600;
 }
 
-/* Desktop Button */
+/* =========================
+      DESKTOP BUTTON
+========================= */
 .nav-btn {
   padding: 10px 20px;
   background: #0d47a1;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .nav-btn:hover {
   background: #08306b;
+  transform: translateY(-2px);
 }
 
-/* MOBILE */
+/* =========================
+      MOBILE MENU
+========================= */
+
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -89,6 +142,17 @@
   transition: 0.3s;
 }
 
+/* animate bars */
+.change.bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.change.bar2 {
+  opacity: 0;
+}
+.change.bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Mobile Menu */
 .mobile-menu {
   background: #fff;
@@ -99,17 +163,23 @@
   flex-direction: column;
   gap: 15px;
   border-bottom: 1px solid #ddd;
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .mobile-menu a {
   text-decoration: none;
   font-size: 18px;
   color: #333;
+  transition: 0.2s;
 }
 
-.mobile-menu a.active {
+.mobile-menu a:hover {
   color: #0d47a1;
-  font-weight: bold;
 }
 
 .mobile-btn {
@@ -118,23 +188,6 @@
   color: white;
   border-radius: 6px;
   display: inline-block;
-}
-
-.mobile-btn:hover {
-  background: #08306b;
-}
-
-/* Hamburger Animation */
-.change.bar1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.change.bar2 {
-  opacity: 0;
-}
-
-.change.bar3 {
-  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* RESPONSIVE */

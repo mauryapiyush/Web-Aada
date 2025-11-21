@@ -1,5 +1,5 @@
 /* ===========================
-   FIXED FOOTER DESIGN + ANIMATIONS
+   CLEAN FOOTER DESIGN
 =========================== */
 
 .footer {
@@ -8,18 +8,8 @@
   color: white;
   padding: 60px 0 30px;
   margin: 0 !important;
-
   border-radius: 0 !important;
   box-shadow: none !important;
-
-  /* Fade-in animation */
-  opacity: 0;
-  animation: fadeFooter 1.2s ease forwards;
-}
-
-@keyframes fadeFooter {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 .footer-container {
@@ -32,22 +22,10 @@
   gap: 40px;
 }
 
-/* FOOTER SECTION (SLIDE-IN ANIMATION) */
+/* FOOTER COLUMN */
 .footer-section {
   flex: 1;
   min-width: 260px;
-
-  opacity: 0;
-  animation: footerSlide 1s ease forwards;
-}
-
-.footer-section:nth-child(1) { animation-delay: 0.3s; }
-.footer-section:nth-child(2) { animation-delay: 0.5s; }
-.footer-section:nth-child(3) { animation-delay: 0.7s; }
-
-@keyframes footerSlide {
-  0% { opacity: 0; transform: translateY(25px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* LOGO */
@@ -59,7 +37,7 @@
 
 .footer-logo img {
   width: 40px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 .footer-logo img:hover {
@@ -71,7 +49,7 @@
   color: #fff;
 }
 
-/* PARAGRAPH */
+/* TEXT */
 .footer-section p {
   margin-top: 10px;
   color: #e6e6e6;
@@ -89,10 +67,9 @@
 .social-icon {
   font-size: 28px;
   cursor: pointer;
-  transition: 0.25s ease-in-out;
+  transition: 0.25s;
 }
 
-/* Hover animation */
 .social-icon:hover {
   transform: scale(1.2) translateY(-3px);
 }
@@ -100,7 +77,7 @@
 .social-icon.whatsapp { color: #25d366; }
 .social-icon.instagram { color: #e1306c; }
 
-/* QUICK LINKS */
+/* LINKS */
 .footer-section.links ul {
   list-style: none;
   margin-top: 10px;
@@ -114,8 +91,8 @@
 .footer-section.links ul li a {
   color: #e6e6e6;
   text-decoration: none;
-  transition: 0.25s ease;
   font-size: 15px;
+  transition: 0.25s;
 }
 
 .footer-section.links ul li a:hover {
@@ -123,7 +100,7 @@
   padding-left: 6px;
 }
 
-/* CONTACT BUTTON */
+/* BUTTON */
 .footer-whatsapp {
   display: inline-block;
   margin-top: 14px;
@@ -132,7 +109,7 @@
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
   font-weight: 600;
 }
 
@@ -141,29 +118,18 @@
   transform: scale(1.05) translateY(-2px);
 }
 
-/* BOTTOM COPYRIGHT */
+/* COPYRIGHT */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
   font-size: 14px;
   color: #e6e6e6;
-
-  opacity: 0;
-  animation: fadeFooter 1.3s ease forwards;
-  animation-delay: 0.8s;
 }
 
-/* ===========================
-   MOBILE FIXES + ANIMATION
-=========================== */
+/* MOBILE */
 @media (max-width: 768px) {
-
-  .footer {
-    padding: 45px 0 25px;
-  }
-
   .footer-container {
     text-align: center;
     flex-direction: column;
@@ -175,7 +141,7 @@
   }
 
   .footer-section {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
     padding-bottom: 20px;
   }
 
