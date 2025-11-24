@@ -9,7 +9,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-
   transition: 0.35s ease-in-out;
   opacity: 0;
   animation: fadeNavbar 0.8s ease forwards;
@@ -18,16 +17,6 @@
 @keyframes fadeNavbar {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Hide on scroll down, show on scroll up */
-.nav-hide {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-.nav-show {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 /* Container */
@@ -99,18 +88,12 @@
   width: 100%;
 }
 
-.nav-links li a:hover {
-  color: #0d47a1;
-}
-
 .nav-links li a.active {
   color: #0d47a1;
   font-weight: 600;
 }
 
-/* =========================
-      DESKTOP BUTTON
-========================= */
+/* Desktop button */
 .nav-btn {
   padding: 10px 20px;
   background: #0d47a1;
@@ -142,7 +125,6 @@
   transition: 0.3s;
 }
 
-/* animate bars */
 .change.bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -182,15 +164,28 @@
   color: #0d47a1;
 }
 
-.mobile-btn {
-  padding: 12px 20px;
-  background: #0d47a1;
-  color: white;
+/* ============================
+   FIXED MOBILE BUTTON (BLUE BG)
+============================ */
+
+.mobile-menu .mobile-btn {
+  padding: 14px 20px !important;
+  background: #0d47a1 !important;
+  color: #fff !important;
+  font-weight: 600;
   border-radius: 6px;
-  display: inline-block;
+  margin-top: 10px;
+  transition: 0.3s ease !important;
 }
 
-/* RESPONSIVE */
+.mobile-menu .mobile-btn:hover {
+  background: #08306b !important;
+  transform: scale(1.05);
+}
+
+/* =========================
+        RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .nav-links,
   .nav-btn {

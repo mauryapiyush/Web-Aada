@@ -32,6 +32,7 @@
   padding: 20px;
 }
 
+/* HERO TEXT */
 .hero-title {
   font-size: 52px;
   font-weight: 800;
@@ -65,7 +66,7 @@
   text-align: center;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 /* Primary */
@@ -112,7 +113,7 @@
 
 
 /* ==============================
-   CARD DESIGN
+   CARD DESIGN (with AOS)
 ==============================*/
 
 .card-wrapper {
@@ -132,14 +133,26 @@
   width: 300px;
   border: 1px solid #e3e9ff;
   box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   text-align: center;
+
+  /* ⬇ Slight zoom on reveal (A effect) */
+  transform: scale(0.95);
+}
+
+.card-box[data-aos] {
+  transform: scale(0.95);
+}
+
+.card-box.aos-animate {
+  transform: scale(1);
 }
 
 .card-box:hover {
   transform: translateY(-6px) scale(1.03);
 }
 
+/* Headings */
 .card-box h3,
 .card-box h4 {
   margin-top: 12px;
@@ -148,6 +161,7 @@
   color: #0d47a1;
 }
 
+/* Description */
 .card-box p {
   color: #333;
   font-size: 15px;
@@ -192,7 +206,7 @@
   color: white;
   border-radius: 6px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .view-more-btn:hover {
@@ -241,7 +255,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .cta-primary {

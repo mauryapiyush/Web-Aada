@@ -1,7 +1,4 @@
-/* ============================
-   MAIN SERVICES SECTION
-============================ */
-
+/* MAIN SERVICES SECTION */
 .services-section {
   width: 100%;
   padding: 70px 0 60px;
@@ -23,7 +20,7 @@
   margin-bottom: 40px;
 }
 
-/* Category Title & Divider */
+/* Category Block */
 .category-block {
   margin-top: 40px;
 }
@@ -47,7 +44,6 @@
   width: 90%;
   max-width: 1200px;
   margin: auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
@@ -61,7 +57,6 @@
   border: 1px solid #dce6ff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
   transition: 0.3s ease;
-  transform: translateY(0);
 }
 
 .service-card:hover {
@@ -95,17 +90,9 @@
   line-height: 1.45;
 }
 
-/* Mobile Fixes */
+/* Mobile */
 @media (max-width: 768px) {
-  .services-main-title {
-    font-size: 30px;
-  }
-
-  .category-title {
-    font-size: 22px;
-  }
-
-  .service-card {
-    padding: 26px 18px;
-  }
+  .services-main-title { font-size: 30px; }
+  .category-title { font-size: 22px; }
+  .service-card { padding: 26px 18px; }
 }

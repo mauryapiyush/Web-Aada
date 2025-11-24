@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./Services.css";
 import { servicesData } from "../../Data/Services";
 
-// ⭐ AOS IMPORTS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -10,25 +9,25 @@ const Services = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 700,
       easing: "ease-in-out",
-      once: false,      // 🔥 AOS will animate every time
-      mirror: true,     // 🔥 Animate when scrolling up
-      offset: 50,
+      once: false,         // <-- animate every time
+      mirror: true,        // <-- animate when scrolling up
+      offset: 100,         // <-- fixes grid issue
+      anchorPlacement: "top-bottom"
     });
 
-    AOS.refresh();       // 🔥 Forces animations to re-calc
+    AOS.refresh();
   }, []);
 
   return (
     <section className="services-section">
 
-      {/* MAIN TITLE */}
       <h2 className="services-main-title" data-aos="fade-up">
         Our Services
       </h2>
 
-      <p className="services-subtitle" data-aos="fade-up" data-aos-delay="100">
+      <p className="services-subtitle" data-aos="fade-up">
         Affordable and high-quality web development & digital marketing services.
       </p>
 
@@ -45,8 +44,8 @@ const Services = () => {
             <div
               className="service-card"
               key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 120}
             >
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
@@ -68,8 +67,8 @@ const Services = () => {
             <div
               className="service-card"
               key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 120}
             >
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
