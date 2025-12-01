@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Components
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 
@@ -14,26 +13,29 @@ import WhyChooseUs from "./Pages/WhyChooseUs/WhyChooseUs";
 import Reviews from "./Pages/Reviews/Reviews";
 import Contact from "./Pages/Contact/Contact";
 
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";   // ⭐ ADD THIS
 import "./App.css";
 
-// ⭐ AOS Animation Imports
+// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
 
-  // ⭐ Initialize AOS Animations
   useEffect(() => {
     AOS.init({
-      duration: 800,   // controls speed of animation
+      duration: 800,
       easing: "ease-in-out",
-      once: true,      // animation happens only once
-      offset: 50,      // delay before animation triggers
+      once: false,
+      offset: 50,
     });
   }, []);
 
   return (
     <BrowserRouter>
+
+      <ScrollToTop /> {/* ⭐ FIXES FOOTER CUTTING ISSUE */}
+
       <Navbar />
 
       <Routes>
@@ -46,6 +48,7 @@ function App() {
       </Routes>
 
       <Footer />
+
     </BrowserRouter>
   );
 }
