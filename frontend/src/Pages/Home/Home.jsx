@@ -2,9 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { servicesData } from "../../Data/Services";
 import { portfolioData } from "../../Data/Portfolio";
 import { reviewsData } from "../../Data/Reviews";
+
 import "./Home.css";
 import heroBG from "../../assets/hero.png";
 
@@ -111,11 +113,9 @@ const Home = () => {
               Build Your <span>Professional Website</span>
             </h1>
 
-            {/* TEXT LINE */}
+            {/* TEXT LINE – single, clean sentence */}
             <p className="hero-subtitle">
-              Fast, modern & responsive websites for small businesses —
-              <br />
-              <span className="subtitle-small">starting at just</span>
+              Fast, modern & responsive websites for small businesses — starting at just
             </p>
 
             {/* PRICE SLOT MACHINE */}

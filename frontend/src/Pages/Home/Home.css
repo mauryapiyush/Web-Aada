@@ -39,15 +39,11 @@
   color: #4dabff;
 }
 
+/* single clean line sentence */
 .hero-subtitle {
   margin-top: 12px;
   font-size: 20px;
   opacity: 0.9;
-}
-
-.subtitle-small {
-  font-size: 18px;
-  opacity: 0.95;
 }
 
 /* 🔥 PRICE ROW */
@@ -336,11 +332,10 @@
   }
 
   .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .subtitle-small {
     font-size: 15px;
+    line-height: 1.3;
+    padding: 0 10px;
+    text-align: center;
   }
 
   .hero-price-row {
